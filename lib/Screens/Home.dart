@@ -1,4 +1,5 @@
 import 'package:api_practise1/Screens/Details.dart';
+import 'package:api_practise1/Screens/Login.dart';
 import 'package:api_practise1/Services/BuildImage.dart';
 import 'package:api_practise1/Theme/Colors.dart';
 import 'package:carousel_slider/carousel_controller.dart';
@@ -105,7 +106,12 @@ class _HomeState extends State<Home> {
               );
             }).toList(),
           ),
-            ],
+          SizedBox(height: 35.h,),
+          ElevatedButton(onPressed: (){
+            Get.offAll(Login());
+          }, child: Icon(Icons.power_settings_new_rounded,color: AppColors().orange,)),
+
+        ],
           )
     );
   }

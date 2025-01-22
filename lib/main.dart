@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       builder: (context, value, g) {
-       return ResponsiveSizer(
+        return ResponsiveSizer(
           builder: (context, orientation, screentype) {
-            return  GetMaterialApp(
+            return GetMaterialApp(
               initialRoute: '/Home',
               routes: Routes.routes,
               themeMode: ThemeMode.values.toList()[value],
@@ -28,9 +28,13 @@ class MyApp extends StatelessWidget {
               darkTheme: ThemeData.dark(),
               theme: ThemeData(
                 appBarTheme: AppBarTheme(
-                  backgroundColor: themeMode.value == 1 ? AppColors().lightBackground : AppColors().DarkBackground,
+                  backgroundColor: themeMode.value == 1
+                      ? AppColors().lightBackground
+                      : AppColors().DarkBackground,
                 ),
-                scaffoldBackgroundColor: themeMode.value == 1 ? AppColors().lightBackground : AppColors().DarkBackground,
+                scaffoldBackgroundColor: themeMode.value == 1
+                    ? AppColors().lightBackground
+                    : AppColors().DarkBackground,
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
               ),
